@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from './components/Form';
 import Recipes from './components/Recipes';
+import HttpsRedirect from 'react-https-redirect';
+
 
 const API_KEY = "88a4147dedeb535dc7be1b83180ae268";
 
@@ -43,14 +45,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title mr-auto"><i className="fa fa-search"></i>Recipe Search</h1>
-          <p className="lead">Search to view to some lipsmacking recipes!</p>
-        </header>
-        <Form getRecipe={this.getRecipe}/>
-        <Recipes recipes={this.state.recipes}/>
-      </div>
+      <HttpsRedirect>
+        <div className="App">
+          <header className="App-header">
+            <h1 className="App-title mr-auto"><i className="fa fa-search"></i>Recipe Search</h1>
+            <p className="lead">Search to view to some lipsmacking recipes!</p>
+          </header>
+          <Form getRecipe={this.getRecipe}/>
+          <Recipes recipes={this.state.recipes}/>
+        </div>
+      </HttpsRedirect>  
     );
   }
   
