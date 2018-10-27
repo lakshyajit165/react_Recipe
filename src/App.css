@@ -119,9 +119,7 @@ input:-webkit-autofill {
   width: 60%;
 }
 
-.active-recipe__img {
-  height: 400px !important;
-}
+
 
 .active-recipe__title {
   text-transform: uppercase;
@@ -164,3 +162,4 @@ input:-webkit-autofill {
 .card{
   box-shadow: -1px 2px 34px -13px rgba(0,0,0,0.75);
 }
+

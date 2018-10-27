@@ -12,7 +12,7 @@ class Recipe extends React.Component{
                 <hr/>
                 <br/>
                 <div className="card col-lg-6 mx-auto">
-                    <img className="card-img-top active-recipe__img " src={this.props.location.state.recipe_img} alt="Card image cap"/>
+                    <img className="card-img-top img-fluid" src={this.props.location.state.recipe_img} alt="Card image cap"/>
                     <div className="card-body">
                         <h4 className="card-text">{this.props.location.state.recipe}</h4>
                         <p className="lead"><b>Publisher: </b>{this.props.location.state.publisher}</p>
